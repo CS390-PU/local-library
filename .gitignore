@@ -128,3 +128,12 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Vite or frontend build output (if students clone both parts)
+frontend/dist/
+
+# VS Code workspace settings
+.vscode/
+
+# PM2 logs or runtime files (if ever used)
+.pm2/

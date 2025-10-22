@@ -1,0 +1,16 @@
+{
+  "name": "local-library-backend",
+  "version": "1.0.0",
+  "description": "Express backend for Local Library tutorial",
+  "type": "module",
+  "main": "bin/www.js",
+  "scripts": {
+    "start": "node ./bin/www.js"
+  },
+  "keywords": [],
+  "author": "CS390 – Pacific University",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
