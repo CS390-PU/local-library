@@ -3,6 +3,9 @@ import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 import mongoose from 'mongoose';
+import Book from "./models/book.js";
+import Author from "./models/author.js";
+
 
 const app = express();
 
@@ -43,6 +46,21 @@ app.use(express.urlencoded({ extended: false }));
 app.get("/", (req, res) => {
   res.send("Local Library backend is running!!");
 });
+
+app.get("/books", async (req, res) => {
+  try {
+    const books = await Book.find();
+    res.json(books);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
+app.get("/authors", async (req, res) => {
+  const authors = await Author.find();
+  res.json(authors);
+});
+
 
 // Export the app for bin/www to import
 export default app;
