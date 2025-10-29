@@ -1,12 +1,19 @@
 // src/App.jsx
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+// Styles
 import "./styles/App.css";
+
+// Layout
 import Sidebar from "./components/layouts/Sidebar.jsx";
-import Home from "./Home.jsx";
-import Category1 from "./Category1.jsx";
-import Category2 from "./Category2.jsx";
-import Category3 from "./Category3.jsx";
+
+// Pages
+import Home from "./pages/Home.jsx";
+import AllBooks from "./pages/AllBooks.jsx";
+// Later you will add:
+// import AllAuthors from "./pages/AllAuthors.jsx";
+// import AllGenres from "./pages/AllGenres.jsx";
 
 function App() {
   return (
@@ -19,9 +26,9 @@ function App() {
         <main className="content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/category1" element={<Category1 />} />
-            <Route path="/category2" element={<Category2 />} />
-            <Route path="/category3" element={<Category3 />} />
+            <Route path="/books" element={<AllBooks />} />
+            {/* <Route path="/authors" element={<AllAuthors />} /> */}
+            {/* <Route path="/genres" element={<AllGenres />} /> */}
           </Routes>
         </main>
       </div>

@@ -1,7 +1,7 @@
 // src/Home.jsx
 import React, { useState, useEffect } from "react";
 import { FaBook, FaUserAlt, FaTags } from "react-icons/fa";
-import "./styles/Home.css";
+import "../styles/Home.css";
 
 const Home = () => {
   const [stats, setStats] = useState({

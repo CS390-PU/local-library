@@ -1,15 +1,20 @@
 // backend/routes/book.js
 import express from "express";
-const router = express.Router();
 import Book from "../models/book.js";
 
-// GET /books — list all books
+const router = express.Router();
+
+// GET /books → return all books WITH author + genre populated
 router.get("/", async (req, res) => {
   try {
-    const books = await Book.find().populate("author").populate("genre");
+    const books = await Book.find()
+      .populate("author")
+      .populate("genre");
+
     res.json(books);
-  } catch (err) {
-    res.status(500).json({ message: err.message });
+  } catch (error) {
+    console.error("Error fetching books:", error);
+    res.status(500).json({ error: "Failed to fetch books" });
   }
 });
 
