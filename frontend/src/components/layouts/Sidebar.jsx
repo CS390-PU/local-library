@@ -9,7 +9,6 @@ export default function Sidebar() {
     { to: "/category1", label: "All Books" },
     { to: "/category2", label: "All Authors" },
     { to: "/category3", label: "All Genres" },
-    { to: "/instances", label: "All Book Instances" },
   ];
 
   return (

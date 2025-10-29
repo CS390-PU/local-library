@@ -5,15 +5,18 @@ import { fileURLToPath } from "url";
 import mongoose from "mongoose";
 import cors from "cors";
 
-// ✅ Only import Author model
+// ✅ Models
 import Author from "./models/author.js";
+import Book from "./models/book.js";
+import Genre from "./models/genre.js";              // ✅ NEW
 
-// ✅ Import only author routes
+// ✅ Routes
 import authorRoutes from "./routes/author.js";
+import bookRoutes from "./routes/book.js";
+import genreRoutes from "./routes/genre.js";        // ✅ NEW
 
 const app = express();
 app.use(cors());
-
 
 /* ------------------------------------------------------------------
    Select MongoDB connection string
@@ -56,14 +59,20 @@ app.get("/", (req, res) => {
 });
 
 /* ------------------------------------------------------------------
-   ✅ Counts route — Author only
+   ✅ Counts route — Authors + Books + Genres (instances later)
 ------------------------------------------------------------------ */
 app.get("/counts", async (req, res) => {
   try {
-    const authorCount = await Author.countDocuments();
+    const [authorCount, bookCount, genreCount] = await Promise.all([
+      Author.countDocuments(),
+      Book.countDocuments(),
+      Genre.countDocuments(),
+    ]);
 
     res.json({
       authorCount,
+      bookCount,
+      genreCount,
     });
   } catch (error) {
     console.error("Error fetching counts:", error);
@@ -71,10 +80,13 @@ app.get("/counts", async (req, res) => {
   }
 });
 
+
 /* ------------------------------------------------------------------
-   ✅ Author routes
+   ✅ Register routes
 ------------------------------------------------------------------ */
 app.use("/authors", authorRoutes);
+app.use("/books", bookRoutes);
+app.use("/genres", genreRoutes);   // ✅ NEW
 
 /* ------------------------------------------------------------------
    Export
