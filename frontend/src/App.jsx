@@ -12,7 +12,7 @@ import Sidebar from "./components/layouts/Sidebar.jsx";
 import Home from "./pages/Home.jsx";
 import AllBooks from "./pages/AllBooks.jsx";
 // Later you will add:
-// import AllAuthors from "./pages/AllAuthors.jsx";
+import AllAuthors from "./pages/AllAuthors.jsx";
 // import AllGenres from "./pages/AllGenres.jsx";
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/books" element={<AllBooks />} />
-            {/* <Route path="/authors" element={<AllAuthors />} /> */}
+            <Route path="/authors" element={<AllAuthors />} />
             {/* <Route path="/genres" element={<AllGenres />} /> */}
           </Routes>
         </main>
