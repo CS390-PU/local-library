@@ -13,8 +13,9 @@
   },
   "portsAttributes": {
     "3000": {
-      "label": "Application",
-      "onAutoForward": "openPreview"
+      "label": "Backend server",
+      "onAutoForward": "openBrowser",
+      "visibility": "public"
     }
   },
   "forwardPorts": [3000, 27017],
