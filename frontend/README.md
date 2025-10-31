@@ -4,44 +4,61 @@
 
 ```
 frontend/
-├── node_modules/                # Installed dependencies (auto-generated)
-├── public/                      # Static files copied as-is during build
-│   └── favicon.ico              # Example (optional)
 │
-├── src/                         # All app source code lives here
-│   ├── assets/                  # Static assets processed by Vite
-│   │   ├── data/                # JSON or other local data sources
-│   │   ├── icons/               # SVGs and small icon graphics
-│   │   └── images/              # Project / site images
+├── public/
+│   ├── pacific_logo.png
+│   └── pacific_logo_white.png
+│
+├── src/
 │   │
-│   ├── components/              # Reusable UI components
-│   │   ├── forms/               # Form components (GeneralSearchForm, etc.)
-│   │   ├── layouts/             # Navigation, dividers, headers, footers
-│   │   └── ui/                  # Optional: small generic UI elements (buttons, cards)
+│   ├── assets/
+│   │   ├── data/
+│   │   │   └── .gitkeep
+│   │   ├── icons/
+│   │   │   └── .gitkeep
+│   │   └── images/
+│   │       └── .gitkeep
 │   │
-│   ├── styles/                  # Global or shared CSS
+│   ├── components/
+│   │   ├── layouts/
+│   │   │   └── Sidebar.jsx
+│   │   └── ui/
+│   │       ├── forms/
+│   │       │   └── .gitkeep
+│   │       └── .gitkeep
+│   │
+│   ├── hooks/
+│   │   └── .gitkeep
+│   │
+│   ├── pages/
+│   │   ├── AllAuthors.jsx
+│   │   ├── AllBooks.jsx
+│   │   ├── AllGenres.jsx
+│   │   └── Home.jsx
+│   │
+│   ├── styles/
+│   │   ├── AllAuthors.css
+│   │   ├── AllBooks.css
+│   │   ├── AllGenres.css
 │   │   ├── App.css
+│   │   ├── CardGrid.css
+│   │   ├── Home.css
 │   │   ├── index.css
-│   │   └── variables.css        # Optional theme or color variables
+│   │   └── Sidebar.css
 │   │
-│   ├── utils/                   # Plain JS helper functions (no JSX)
-│   │   ├── formatters.js
-│   │   └── filters.js
+│   ├── utils/
+│   │   └── .gitkeep
 │   │
-│   ├── hooks/                   # Custom React hooks (optional)
-│   │   └── useFetch.js
-│   │
-│   ├── App.jsx                  # Root component
-│   ├── main.jsx                 # Entry point that mounts React
-│   └── index.html               # (If desired inside src/, but usually at project root)
+│   ├── App.jsx
+│   └── main.jsx
 │
 ├── .gitignore
-├── index.html                   # Main HTML file served by Vite
+├── eslint.config.js
+├── index.html
 ├── package.json
+├── package-lock.json
 ├── vite.config.js
 └── README.md
-
-
 ```
 
 # React + Vite

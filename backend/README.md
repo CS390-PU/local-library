@@ -4,22 +4,39 @@
 
 ```
 backend/
+│
 ├── bin/
-│   └── www.js               # Starts the HTTP server (entry point)
+│   └── www.js
 │
-├── node_modules/            # Installed dependencies (auto-generated)
+├── models/
+│   ├── author.js
+│   ├── book.js
+│   ├── bookinstance.js        ← You may remove BookInstance if not used this round
+│   └── genre.js
 │
-├── app.js                   # Express app configuration and routes
-├── package.json             # Project metadata and dependencies
-├── .gitignore               # Files and folders Git should ignore
-└── README.md                # Project documentation (this file)
-
+├── routes/
+│   ├── author.js
+│   ├── book.js
+│   └── genre.js
+│
+├── app.js
+├── package.json
+├── package-lock.json
+├── populate.js
+└── README.md
 ```
 
 ## Install Dependencies
 
 ```
 npm install
+```
+
+
+## IMPORTANT
+
+```
+Make sure the Backend server port has Visibility Public
 ```
 
 ## Start Backend Server
