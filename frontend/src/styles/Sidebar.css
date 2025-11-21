@@ -1,7 +1,7 @@
 /* src/styles/Sidebar.css */
 
 .sidebar {
-    width: 220px;
+    flex: 0 0 220px;
     /* fixed width so it never shrinks */
     background-color: #121212;
     color: #e0e0e0;
@@ -40,14 +40,13 @@
     padding: 0.9rem 1.25rem;
     text-decoration: none;
     color: #ccc;
-
-    .sidebar-link {
-        transition: background-color 0.25s ease, color 0.25s ease, border-left 0.25s ease;
-    }
-
     border-left: 4px solid transparent;
     font-weight: 500;
+    transition: background-color 0.25s ease,
+                color 0.25s ease,
+                border-left 0.25s ease;
 }
+
 
 .sidebar-link:hover {
     background-color: #1c1c1c;

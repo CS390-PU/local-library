@@ -3,17 +3,24 @@
 /* Layout wrapper for sidebar + content */
 .app-layout {
   display: flex;
+  flex-direction: row;
   height: 100vh;
   overflow: hidden;
   background-color: #f8f8f8;
   font-family: "Inter", sans-serif;
+
+  /* IMPORTANT:
+     This allows the content column to shrink 
+     instead of forcing the sidebar to shrink */
+  min-width: 0;
 }
 
 /* Sidebar styling is in Sidebar.css */
 
 /* Right-hand content area */
 .content {
-  flex-grow: 1;
+  flex: 1 1 auto;
+  min-width: 550px;       /* ✅ prevents cards from smashing */
   height: 100vh;
   overflow-y: auto;
   padding: 2rem 3rem;
@@ -21,6 +28,7 @@
   color: #222;
   box-sizing: border-box;
 }
+
 
 /* Optional scrollbar styling (consistent with Pacific aesthetic) */
 .content::-webkit-scrollbar {
@@ -38,4 +46,11 @@
 
 .content::-webkit-scrollbar-track {
   background-color: #f9f9f9;
+}
+
+/* Optional: Responsive minimum width adjustment */
+@media (max-width: 700px) {
+  .content {
+    min-width: 300px;
+  }
 }
