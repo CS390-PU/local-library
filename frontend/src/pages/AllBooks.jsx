@@ -7,18 +7,19 @@ export default function AllBooks() {
 
   useEffect(() => {
     const fetchBooks = async () => {
-      const host = window.location.hostname;
+      // const host = window.location.hostname;
 
-      let baseUrl;
-      if (host.includes("-5173")) {
-        baseUrl = `https://${host.replace("-5173", "-13064")}`;
-      } else if (host.includes("localhost")) {
-        baseUrl = "http://localhost:13064";
-      } else {
-        baseUrl = `http://${host}`;
-      }
+      // let baseUrl;
+      // if (host.includes("-5173")) {
+      //   baseUrl = `https://${host.replace("-5173", "-13064")}`;
+      // } else if (host.includes("localhost")) {
+      //   baseUrl = "http://localhost:13064";
+      // } else {
+      //   baseUrl = `http://${host}`;
+      // }
 
-      const response = await fetch(`${baseUrl}/doug/api/books`);
+      // const response = await fetch(`${baseUrl}/doug/api/books`);
+      const response = await fetch(`/doug/api/books`);
       const data = await response.json();
       setBooks(data);
     };

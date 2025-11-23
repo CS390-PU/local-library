@@ -13,18 +13,19 @@ const Home = () => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const host = window.location.hostname;
+        // const host = window.location.hostname;
 
-        let baseUrl;
-        if (host.includes("-5173")) {
-          baseUrl = `https://${host.replace("-5173", "-13064")}`;
-        } else if (host.includes("localhost")) {
-          baseUrl = "http://localhost:13064";
-        } else {
-          baseUrl = `http://${host}`;
-        }
+        // let baseUrl;
+        // if (host.includes("-5173")) {
+        //   baseUrl = `https://${host.replace("-5173", "-13064")}`;
+        // } else if (host.includes("localhost")) {
+        //   baseUrl = "http://localhost:13064";
+        // } else {
+        //   baseUrl = `http://${host}`;
+        // }
 
-        const response = await fetch(`${baseUrl}/doug/api/counts`);
+        // const response = await fetch(`${baseUrl}/doug/api/counts`);
+        const response = await fetch(`/doug/api/counts`);
         const data = await response.json();
 
         setStats({
