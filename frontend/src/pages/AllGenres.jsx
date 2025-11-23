@@ -15,7 +15,7 @@ export default function AllGenres() {
       } else if (host.includes("localhost")) {
         baseUrl = "http://localhost:13064";
       } else {
-        baseUrl = `https://${host}`;
+        baseUrl = `http://${host}`;
       }
 
       const response = await fetch(`${baseUrl}/doug/api/genres`);
