@@ -16,7 +16,7 @@ import AllGenres from "./pages/AllGenres.jsx";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/doug">
       <div className="app-layout">
         {/* Fixed sidebar */}
         <Sidebar />
