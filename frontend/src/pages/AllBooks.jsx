@@ -18,7 +18,7 @@ export default function AllBooks() {
         baseUrl = `https://${host}`;
       }
 
-      const response = await fetch(`${baseUrl}/api/books`);
+      const response = await fetch(`${baseUrl}/doug/api/books`);
       const data = await response.json();
       setBooks(data);
     };

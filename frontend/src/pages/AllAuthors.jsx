@@ -18,7 +18,7 @@ export default function AllAuthors() {
         baseUrl = `https://${host}`;
       }
 
-      const response = await fetch(`${baseUrl}/api/authors`);
+      const response = await fetch(`${baseUrl}/doug/api/authors`);
       const data = await response.json();
       setAuthors(data);
     };

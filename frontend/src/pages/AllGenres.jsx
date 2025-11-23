@@ -18,7 +18,7 @@ export default function AllGenres() {
         baseUrl = `https://${host}`;
       }
 
-      const response = await fetch(`${baseUrl}/api/genres`);
+      const response = await fetch(`${baseUrl}/doug/api/genres`);
       const data = await response.json();
       setGenres(data);
     };

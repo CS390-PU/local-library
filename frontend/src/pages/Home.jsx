@@ -24,7 +24,7 @@ const Home = () => {
           baseUrl = `https://${host}`;
         }
 
-        const response = await fetch(`${baseUrl}/api/counts`);
+        const response = await fetch(`${baseUrl}/doug/api/counts`);
         const data = await response.json();
 
         setStats({
