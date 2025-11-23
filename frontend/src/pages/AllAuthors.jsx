@@ -11,14 +11,14 @@ export default function AllAuthors() {
 
       let baseUrl;
       if (host.includes("-5173")) {
-        baseUrl = `https://${host.replace("-5173", "-3000")}`;
+        baseUrl = `https://${host.replace("-5173", "-13064")}`;
       } else if (host.includes("localhost")) {
-        baseUrl = "http://localhost:3000";
+        baseUrl = "http://localhost:13064";
       } else {
         baseUrl = `https://${host}`;
       }
 
-      const response = await fetch(`${baseUrl}/authors`);
+      const response = await fetch(`${baseUrl}/api/authors`);
       const data = await response.json();
       setAuthors(data);
     };

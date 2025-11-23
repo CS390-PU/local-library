@@ -61,7 +61,7 @@ app.get("/", (req, res) => {
 /* ------------------------------------------------------------------
    ✅ Counts route — Authors + Books + Genres (instances later)
 ------------------------------------------------------------------ */
-app.get("/counts", async (req, res) => {
+app.get("/api/counts", async (req, res) => {
   try {
     const [authorCount, bookCount, genreCount] = await Promise.all([
       Author.countDocuments(),
@@ -84,9 +84,9 @@ app.get("/counts", async (req, res) => {
 /* ------------------------------------------------------------------
    ✅ Register routes
 ------------------------------------------------------------------ */
-app.use("/authors", authorRoutes);
-app.use("/books", bookRoutes);
-app.use("/genres", genreRoutes);   // ✅ NEW
+app.use("/api/authors", authorRoutes);
+app.use("/api/books", bookRoutes);
+app.use("/api/genres", genreRoutes);   // ✅ NEW
 
 /* ------------------------------------------------------------------
    Export

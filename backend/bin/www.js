@@ -3,7 +3,7 @@ import app from "../app.js";
 import http from "http";
 
 // Normalize port number
-const port = normalizePort(process.env.PORT || "3000");
+const port = normalizePort(process.env.PORT || "13064");
 app.set("port", port);
 
 // Create HTTP server
